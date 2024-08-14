@@ -1,0 +1,9 @@
+/*!
+Theme Name:   Mattias theme
+Author:       Mattias
+*/
+
+.archive.tax-main_protein.term-lax .description p {
+    margin-bottom: 0;
+    color: coral;
+}

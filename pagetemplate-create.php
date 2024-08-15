@@ -35,18 +35,7 @@ get_header(); ?>
                 }
                 
             }
-
-            ?>
-            <form method="POST">
-                <input name="title" />
-                <textarea name="description"></textarea>
-                <select name="products[]" multiple>
-                    <option value="23">Ris</option>
-                    <option value="25">Lax</option>
-                </select>
-                <input type="submit" />
-            </form>
-            <?php
+            do_action('output_create_form');
 		endwhile;
 		?>
 

@@ -20,7 +20,7 @@ function mt_create_form() {
 
     $options = '<option value="23">Ris</option>
     <option value="25">Lax</option>';
-    $products = apply_filters('create_form_products', array(23 => __('Ris', 'mt'), 25 => __('Lax', 'mt')));
+    $products = apply_filters('create_form_products', array(58 => __('Ris', 'mt'), 17 => __('Lax', 'mt'), 59 => __('Majs', 'mt')));
     $options = apply_filters('create_form_html_options', $options, $products);
 
     $fields = ' <input name="title" />

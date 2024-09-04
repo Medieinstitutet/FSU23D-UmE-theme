@@ -4,6 +4,68 @@ Author:       Mattias
 Text Domain: mt
 */
 
+html, body {
+    margin: 0;
+    color: #313131;
+    font-family: "Nunito", sans-serif;
+}
+
+.centered-site-area {
+    margin: auto;
+    max-width: 1040px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.content-area {
+    margin: auto;
+    max-width: 860px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.top-menu {
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid #d4d4d4;
+    margin-bottom: 90px;
+}
+
+.top-menu ul {
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.top-menu ul li {
+    display: block;
+    margin-right: 30px;
+}
+
+.mini-cart {
+    display: none;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+blockquote {
+    border: 1px solid #9ea9aa;
+    background-color: #f4fcfb;
+    border-radius: 40px;
+    padding: 20px;
+}
+
 .archive.tax-main_protein.term-lax .description p {
     margin-bottom: 0;
     color: coral;

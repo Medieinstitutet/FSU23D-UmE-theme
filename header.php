@@ -12,12 +12,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-<div>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57RDJ8PK"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<div class="top-menu">
+   <div class="centered-site-area">
+    <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+</div>
+</div>
+<div class="mini-cart">
     <?php
         $line_items = WC()->cart->get_cart_contents();
 

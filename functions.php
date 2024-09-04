@@ -9,6 +9,9 @@ add_action('after_setup_theme', 'mt_load_textdomain');
 
 function mt_enqueue_styles() {
     // Registrera huvud stylesheet
+
+    wp_enqueue_style( 'mt-fonts', 'https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
     wp_enqueue_style( 'mt-style', get_stylesheet_uri() );
 
 }

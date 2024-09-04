@@ -44,7 +44,7 @@ endif;
 			
 			if(!empty($product_ids)) {
 				?>
-					<h3>Receptet innehåller</h3>
+					<h3><?php _e("Recipe contains", "mt") ?></h3>
 				<?php
 				$total_price = 0;
 				foreach($product_ids as $product_id) {

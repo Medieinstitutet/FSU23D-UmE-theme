@@ -1,5 +1,10 @@
 <?php
 
+function mt_load_textdomain() {
+    load_theme_textdomain('mt', get_template_directory());
+}
+add_action('after_setup_theme', 'mt_load_textdomain');
+
 //add_filter( 'show_admin_bar', '__return_false' );
 
 function mt_enqueue_styles() {
@@ -12,7 +17,7 @@ add_action( 'wp_enqueue_scripts', 'mt_enqueue_styles' );
 
 
 function mt_register_my_menu() {
-    register_nav_menu('header-menu', __( 'Header Menu' ));
+    register_nav_menu('header-menu', __( 'Header Menu', 'mt' ));
 }
 add_action( 'init', 'mt_register_my_menu' );
 
@@ -20,7 +25,7 @@ function mt_create_form() {
 
     $options = '<option value="23">Ris</option>
     <option value="25">Lax</option>';
-    $products = apply_filters('create_form_products', array(58 => __('Ris', 'mt'), 17 => __('Lax', 'mt'), 59 => __('Majs', 'mt')));
+    $products = apply_filters('create_form_products', array(58 => __('Rice', 'mt'), 17 => __('Salmon', 'mt'), 59 => __('Sweetcorn', 'mt')));
     $options = apply_filters('create_form_html_options', $options, $products);
 
     $fields = ' <input name="title" />
@@ -28,12 +33,12 @@ function mt_create_form() {
                 <select name="products[]" multiple>
                     '.$options.'
                 </select>
-                <input type="submit" />';
+                <input type="submit" onclick="dataLayer.push({event: \'createCollection\'})"/>';
     
                 $fields = apply_filters('create_form_html_field', $fields);
 
 
-    $output = '<form method="'.apply_filters('create_form_html_form_method', 'POST').'" action="'.apply_filters('create_form_html_form_action', '').'">
+    $output = '<form action="?submitted=true" method="'.apply_filters('create_form_html_form_method', 'POST').'" action="'.apply_filters('create_form_html_form_action', '').'">
                '.$fields.'
             </form>';
 

@@ -34,6 +34,11 @@ get_header(); ?>
                     update_post_meta($new_id, 'includedProducts', $_POST['products']);
                 }
                 
+                ?>
+                    <script>
+                        dataLayer.push({event: 'createFormSubmitted'});
+                    </script>
+                <?php
             }
             do_action('output_create_form');
 		endwhile;
